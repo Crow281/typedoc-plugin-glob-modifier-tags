@@ -104,6 +104,10 @@ extracting the unscoped name.
    and appending Demo and Example sections to the end.
    Keep in mind that this document will be added to the TypeDoc,
    and as such, you will generally want to use absolute links.
+   By default, the API link will be set to whatever link you
+   selected inside of template.config.ts, if you want
+   to point to the package's specific page, you will
+   need to set that yourself.
 
 3. Now you will want to go open your repository's copy of
    [package.json](https://docs.npmjs.com/creating-a-package-json-file).

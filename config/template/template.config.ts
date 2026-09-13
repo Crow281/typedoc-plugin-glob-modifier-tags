@@ -12,16 +12,19 @@ import type { TemplateOptions } from "./scripts/TemplateOptions";
  */
 const config: TemplateOptions = {
     //URL pointing to the location of this project's API documentation.
-    apiDocUrl: "https://crow281.github.io/ts-monorepo-template/doc/api/latest/",
+    apiDocUrl:
+        "https://crow281.github.io/typedoc-plugin-glob-modifier-tags/doc/api/latest/",
 
     //URL pointing to the page people can report bugs to.
-    bugReportUrl: "https://github.com/Crow281/ts-monorepo-template/issues",
+    bugReportUrl:
+        "https://github.com/Crow281/typedoc-plugin-glob-modifier-tags/issues",
 
     //Name of the license this project is using.
     licenseName: "MIT",
 
     //URL to the Git repository.
-    repositoryUrl: "git+https://github.com/Crow281/ts-monorepo-template.git",
+    repositoryUrl:
+        "git+https://github.com/Crow281/typedoc-plugin-glob-modifier-tags.git",
 
     /**
      * Used to generate the homepage URL for the new package.
@@ -58,7 +61,7 @@ const config: TemplateOptions = {
             //Create the base url packages are stored to on the website.
             //the package's unscoped name will be appended to it to create the homepage url.
             const packageBaseUrl: URL = new URL(
-                "https://github.com/Crow281/ts-monorepo-template/tree/main/packages/",
+                "https://github.com/Crow281/typedoc-plugin-glob-modifier-tags/tree/main/packages/",
             );
 
             //Append the unscoped package name to the base url

@@ -30,7 +30,10 @@ import type { UserConfig } from "tsdown";
 const config: UserConfig = defineConfig({
     //Tell tsdown to use workspace mode,
     //and that there are multiple packages to build.
-    workspace: true,
+    workspace: {
+        //Select the specific spot the packages to operate are in.
+        include: ["packages/*"],
+    },
 
     //Enables generation of TypeScript declaration files,
     //the files explaining the types of each item in the project.
@@ -40,7 +43,7 @@ const config: UserConfig = defineConfig({
     //Paths are relative to the package currently being operated on.
     entry: [
         //Make every non-internal script under the source directory an entry file.
-        "./src/**/*.ts",
+        "./src/**/*",
 
         //Do NOT make scripts inside of internal directories directly available.
         //This project is setup to make anything under an "internal" directory

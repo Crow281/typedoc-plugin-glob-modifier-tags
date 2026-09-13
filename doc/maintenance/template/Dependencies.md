@@ -19,6 +19,18 @@ Libraries this project is dependant on for the developers maintaining it.
     </tr>
     <tr>
         <td>
+            <a href="https://www.npmjs.com/package/@crow281/typedoc-plugin-glob-modifier-tags">@crow281/typedoc-plugin-glob-modifier-tags</a>
+        </td>
+        <td>
+            TypeDoc plugin enabling TypeDoc to mark
+            all code matching a given glob filter with
+            desired modifier tags.
+            The template uses it to mark all scripts descended from
+            folders named "internal" as "\@internal".
+        </td>
+    </tr>
+    <tr>
+        <td>
             <a href="https://www.npmjs.com/package/@eslint/js">@eslint/js</a>
         </td>
         <td>

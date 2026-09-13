@@ -316,11 +316,13 @@ to something included in the TypeDoc.
 
 ### Plugins
 
-#### config/doc/plugin/TagInternal.js
+#### @crow281/typedoc-plugin-glob-modifier-tags
 
-This is one of the custom TypeDoc plugins used by the project.
+This TypeDoc plugin enables TypeDoc to mark
+all code matching a given glob filter with
+desired modifier tags.
 
-This marks everything under an "internal" folder as @internal,
+The template uses it to mark any everything under an "internal" folder as \@internal,
 telling users using the documentation that they are not for public use.
 
 If you do not want @internal items to be in the documentation at all,

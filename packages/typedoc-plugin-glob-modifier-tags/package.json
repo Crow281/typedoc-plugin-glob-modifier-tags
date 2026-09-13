@@ -1,0 +1,82 @@
+{
+    "name": "@crow281/typedoc-plugin-glob-modifier-tags",
+    "version": "1.0.0",
+    "private": true,
+    "description": "TypeDoc plugin that dynamically adds desired comments to any TypeDoc within files specified by globs.",
+    "author": "crow281",
+    "contributors": [],
+    "keywords": [
+        "documentation",
+        "generator",
+        "glob",
+        "plugin",
+        "typedoc"
+    ],
+    "license": "MIT",
+    "homepage": "https://github.com/Crow281/ts-monorepo-template/tree/main/packages/typedoc-plugin-glob-modifier-tags",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Crow281/typedoc-plugin-glob-modifier-tags.git",
+        "directory": "packages/typedoc-plugin-glob-modifier-tags"
+    },
+    "bugs": {
+        "url": "https://github.com/Crow281/typedoc-plugin-glob-modifier-tags/issues"
+    },
+    "type": "module",
+    "sideEffects": false,
+    "scripts": {},
+    "files": [
+        "dist",
+        "src",
+        "LICENSE",
+        "README.md"
+    ],
+    "exports": {
+        ".": {
+            "import": "./dist/index.mjs",
+            "require": "./dist/index.cjs"
+        },
+        "./GlobModifierTags": {
+            "import": "./dist/GlobModifierTags.mjs",
+            "require": "./dist/GlobModifierTags.cjs"
+        },
+        "./IsGlobModifierTags": {
+            "import": "./dist/IsGlobModifierTags.mjs",
+            "require": "./dist/IsGlobModifierTags.cjs"
+        },
+        "./Load": {
+            "import": "./dist/Load.mjs",
+            "require": "./dist/Load.cjs"
+        },
+        "./Options": {
+            "import": "./dist/Options.mjs",
+            "require": "./dist/Options.cjs"
+        },
+        "./plugin/GlobModifierTagsOption": {
+            "import": "./dist/plugin/GlobModifierTagsOption.mjs",
+            "require": "./dist/plugin/GlobModifierTagsOption.cjs"
+        },
+        "./plugin/Plugin": {
+            "import": "./dist/plugin/Plugin.mjs",
+            "require": "./dist/plugin/Plugin.cjs"
+        },
+        "./plugin/ValidateGlobModifierTagsOption": {
+            "import": "./dist/plugin/ValidateGlobModifierTagsOption.mjs",
+            "require": "./dist/plugin/ValidateGlobModifierTagsOption.cjs"
+        },
+        "./package.json": "./package.json"
+    },
+    "dependencies": {
+        "picomatch": "^4.0.7"
+    },
+    "peerDependencies": {
+        "typedoc": "^0.28.20"
+    },
+    "peerDependenciesMeta": {},
+    "devDependencies": {
+        "@types/picomatch": "^4.0.3"
+    },
+    "main": "./dist/index.cjs",
+    "module": "./dist/index.mjs",
+    "types": "./dist/index.d.cts"
+}

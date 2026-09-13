@@ -33,22 +33,36 @@ import { EntryPointStrategy } from "typedoc";
  */
 const config = {
     //How much we want typedoc to print to console. Defaults to "Info".
-    logLevel: "Verbose",
+    logLevel: "Info",
     //List of plugins we are adding to typedoc.
     plugin: [
         //This plugin enables typedoc to understand
         //some of the global object types (like Math) and link them.
         "typedoc-plugin-mdn-links",
-        //This custom plugin marks all modules under
-        //an "internal" folder with the @internal tag.
-        "./plugin/TagInternal.js",
+        //This plugin applies a desired set of modifier tags
+        //to every TypeDoc reflection matching the filter.
+        "@crow281/typedoc-plugin-glob-modifier-tags",
     ],
     //Tells TypeDoc how to link to 3rd party library types.
-    externalSymbolLinkMappings: {},
+    externalSymbolLinkMappings: {
+        //Note that "!" must be appended (e.g. {@link !Error}) for globals.
+        //The typedoc-plugin-mdn-links will handle most of these.
+        global: {},
+        //Third party library this is a plugin for in the first place.
+        typedoc: {
+            ObjectDeclarationOption:
+                "https://typedoc.org/api/interfaces/ObjectDeclarationOption.html",
+            ReflectionKind: "https://typedoc.org/api/enums/ReflectionKind.html",
+        },
+    },
     //Search all of the packages in the monorepo.
     entryPointStrategy: EntryPointStrategy.Packages,
     //List of locations to search for packages.
     entryPoints: ["../../packages/*"],
+    //Ensure that an entry is always created,
+    //even if there is only one entry.
+    //Ensures consistency even if the monorepo only has one package.
+    alwaysCreateEntryPointModule: true,
     //What scripts shouldn't be documented.
     exclude: [],
     //The workspace itself does not have a version,

@@ -21,40 +21,20 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
+import BaseConfig from "../../config/typedoc/typedoc.package.config.js";
+
 /**
- * Base configuration object for TypeDoc in
- * individual packages in the monorepo,
- * shared by all of them.
+ * The configuration object this specific package is using for TypeDoc.
  *
  * TypeDoc is a tool to create web documentation for the project's code.
  *
- * Note that since this object is extended by the TypeDoc
- * config files in each individual package,
- * file paths will be relative to there.
+ * Note that all file paths are relative to this file.
  * @type {Partial<import("typedoc").TypeDocOptions>}
  */
 const config = {
-    //Record the version according to NPM package.json.
-    includeVersion: true,
-    //Specify where to find the typescript configuration for this package.
-    tsconfig: "./tsconfig.json",
-    //Search all of the folders in entry points.
-    entryPointStrategy: "Expand",
-    //List of package locations to search for files to document.
-    //Paths will be relative to the individual config file
-    entryPoints: ["src/"],
-    //Make the root source folder the display base path,
-    //to enforce consistency if there is nothing at the root.
-    //Otherwise, for example, if the common root of everything
-    //is subfolder "src/some-folder", then some-folder
-    displayBasePath: "src/",
-    //Additional package documents to package into the TypeDoc.
-    projectDocuments: [
-        //List of changes made to every package.
-        "CHANGELOG.md",
-    ],
-    //Location of the package project readme file.
-    readme: "./README.md",
+    //Inherit the basic config shared across all packages.
+    ...BaseConfig,
+    //Add any additions or overrides to the base config below.
 };
 
 //Provide the configuration object.
