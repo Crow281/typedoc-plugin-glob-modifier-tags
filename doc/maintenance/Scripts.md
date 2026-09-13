@@ -202,6 +202,10 @@ To do the same for a new project:
 - Go to the Git project's settings and click on the "Pages" button
   to open the GitHub Pages menu. You can select the "gh-pages" branch
   to host it.
+- Make sure a .nojekyll file is at the root of the gh-pages branch,
+  to disable Jekyll.
+  Otherwise, any pages starting with underscores (e.g. "_")
+  will be mistaken for Jekyll files and won't be added to the website.
 
 Whenever you have a major update, you will probably want to archive
 the old documentation in a folder named after the version it referred to.
