@@ -1,7 +1,7 @@
 {
     "name": "@crow281/typedoc-plugin-glob-modifier-tags",
     "version": "1.0.0",
-    "private": true,
+    "private": false,
     "description": "TypeDoc plugin that dynamically adds desired comments to any TypeDoc within files specified by globs.",
     "author": "crow281",
     "contributors": [],
@@ -9,7 +9,9 @@
         "documentation",
         "generator",
         "glob",
+        "modifier tags",
         "plugin",
+        "tags",
         "typedoc"
     ],
     "license": "MIT",
