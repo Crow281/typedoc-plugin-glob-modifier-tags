@@ -18,7 +18,6 @@
         "dev": "tsdown --watch",
         "test": "vitest --config ./config/vitest/vitest.config.ts",
         "release": "bumpp --configFilePath ./config/bumpp/bump.config.ts -r",
-        "prepublishOnly": "pnpm run build",
         "doc": "typedoc --options config/typedoc/typedoc.config.js"
     },
     "devDependencies": {

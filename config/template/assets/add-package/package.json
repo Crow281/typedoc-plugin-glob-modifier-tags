@@ -18,7 +18,9 @@
     },
     "type": "module",
     "sideEffects": false,
-    "scripts": {},
+    "scripts": {
+        "prepublishOnly": "npm run build --prefix ../../"
+    },
     "exports": {
         "./package.json": "./package.json"
     },
