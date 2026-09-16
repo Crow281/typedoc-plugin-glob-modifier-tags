@@ -168,20 +168,17 @@ export class ModifierTagsMatcher {
 
         //Iterate every matcher.
         for (const elementMatcher of elementMatchers) {
-            //Test the matcher against filePath.
-            const isMatch: boolean = elementMatcher.matcher(filePath);
+            //Fetch modifier tags.
+            const modifierTags = elementMatcher.modifierTags;
 
-            //If it matched...
-            if (isMatch) {
-                //Fetch modifier tags.
-                const modifierTags = elementMatcher.modifierTags;
+            //If user either doesn't care about kinds
+            //or if it matches.
+            if (!modifierTags.kinds || reflection.kindOf(modifierTags.kinds)) {
+                //Test the matcher against filePath.
+                const isMatch: boolean = elementMatcher.matcher(filePath);
 
-                //If user either doesn't care about kinds
-                //or if it matches.
-                if (
-                    !modifierTags.kinds ||
-                    reflection.kindOf(modifierTags.kinds)
-                ) {
+                //If it matched...
+                if (isMatch) {
                     //Add the modifier tags to the result.
                     matches.add(modifierTags);
                 }
