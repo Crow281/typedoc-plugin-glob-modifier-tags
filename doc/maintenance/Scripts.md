@@ -260,3 +260,18 @@ Note that update will also run its own audit:
 ```Console
 npm audit
 ```
+
+## Publishing
+
+When you want to publish your package to the public,
+use the NPM publish tool, marked with the access public flag:
+
+```Console
+npm publish --access=public
+```
+
+If you want to mark it as a beta, append "--tag beta":
+
+```Console
+npm publish --access=public --tag beta
+```
