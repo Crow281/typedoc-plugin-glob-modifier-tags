@@ -83,6 +83,42 @@ const config = [
             "@limegrass/import-alias/import-alias": ["error"],
         },
     },
+
+    //Enforces consistent type importing.
+    {
+        rules: {
+            //Rule enforcing use of the type keyword in imports.
+            "@typescript-eslint/consistent-type-imports": [
+                "error",
+                {
+                    //Use type imports.
+                    prefer: "type-imports",
+
+                    //Separate type imports from regular imports.
+                    fixStyle: "separate-type-imports",
+                },
+            ],
+
+            //Rule enforcing that the type keyword is consistently placed.
+            "import-x/consistent-type-specifier-style": [
+                "error",
+                "prefer-top-level",
+            ],
+        },
+    },
+
+    //Enforces no duplicate imports.
+    {
+        rules: {
+            "import-x/no-duplicates": [
+                "warn",
+                {
+                    //Treat queries as different imports.
+                    considerQueryString: true,
+                },
+            ],
+        },
+    },
 ];
 
 //Provide the configuration object.

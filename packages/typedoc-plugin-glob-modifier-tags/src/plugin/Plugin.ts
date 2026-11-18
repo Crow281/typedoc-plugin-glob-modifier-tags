@@ -26,14 +26,14 @@ import { GlobModifierTagsOption } from "@/plugin/GlobModifierTagsOption";
 import { addModifierTags } from "@/plugin/internal/AddModifierTags";
 import { iterateIterableModifierTags } from "@/plugin/internal/IterateIterableModifierTags";
 import { ModifierTagsMatcher } from "@/plugin/internal/ModifierTagsMatcher";
-import {
-    type Application,
+import type {
+    Application,
     Context,
-    Converter,
     DeclarationReflection,
     Options,
-    type TagString,
+    TagString,
 } from "typedoc";
+import { Converter } from "typedoc";
 
 /**
  * Object representing our plugin.

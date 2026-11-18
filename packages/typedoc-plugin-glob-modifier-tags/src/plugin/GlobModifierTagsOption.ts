@@ -23,7 +23,8 @@
  */
 import type { GlobModifierTags } from "@/GlobModifierTags";
 import { validateGlobModifierTagsOption } from "@/plugin/ValidateGlobModifierTagsOption";
-import { type MixedDeclarationOption, Options, ParameterType } from "typedoc";
+import type { MixedDeclarationOption, Options } from "typedoc";
+import { ParameterType } from "typedoc";
 
 /**
  * TypeScript option to let user select an

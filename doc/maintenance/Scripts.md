@@ -43,6 +43,17 @@ If one of your files is conducting a valid import in a way that
 knip does not recognize, then you can add it to config property
 ignoreUnresolved.
 
+## Typecheck
+
+The following script verifies that all TypeScript types are being used correctly:
+
+```Console
+npm run typecheck
+```
+
+It works by compiling every package with TypeScript and without output
+to detect any type errors throughout the workspace.
+
 ## Lint
 
 The following script allows you to use

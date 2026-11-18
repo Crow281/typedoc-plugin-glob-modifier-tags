@@ -22,7 +22,7 @@
  * THE SOFTWARE.
  */
 import { isTypeArray } from "@/internal/IsTypeArray";
-import { ReflectionKind } from "typedoc";
+import type { ReflectionKind } from "typedoc";
 
 /**
  * Checks whether a given value is a {@link ReflectionKind} array.

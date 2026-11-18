@@ -21,7 +21,8 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-import { Comment, type Reflection, type TagString } from "typedoc";
+import { Comment } from "typedoc";
+import type { Reflection, TagString } from "typedoc";
 
 /**
  * Handles adding the given array of modifier tags to the given reflection.

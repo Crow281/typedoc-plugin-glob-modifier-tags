@@ -23,7 +23,7 @@
  */
 import { GlobModifierTagsOption } from "@/plugin/GlobModifierTagsOption";
 import { Plugin } from "@/plugin/Plugin";
-import { Application, Options } from "typedoc";
+import type { Application, Options } from "typedoc";
 
 /**
  * Allows TypeDoc to access the plugin.

@@ -21,7 +21,7 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-import { UserConfig } from "vite";
+import type { UserConfig } from "vite";
 import { defineConfig } from "vitest/config";
 
 /**

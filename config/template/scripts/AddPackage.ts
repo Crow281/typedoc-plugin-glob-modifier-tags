@@ -27,7 +27,8 @@ import { access, mkdir, readFile, readdir, writeFile } from "fs/promises";
 import Mustache from "mustache";
 import { dirname, join, relative, resolve } from "path";
 import { stdin, stdout } from "process";
-import { Interface, createInterface } from "readline/promises";
+import { createInterface } from "readline/promises";
+import type { Interface } from "readline/promises";
 import { fileURLToPath } from "url";
 
 /**

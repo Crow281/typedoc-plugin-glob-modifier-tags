@@ -22,7 +22,7 @@
  * THE SOFTWARE.
  */
 import { load } from "@/Load";
-import { type Options } from "@/Options";
+import type { Options } from "@/Options";
 
 //Provide the load function in the default location checked by TypeDoc.
 //Provide easy access to the options used to implement config as well.

@@ -21,7 +21,7 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-import { ReflectionKind, type TagString } from "typedoc";
+import type { ReflectionKind, TagString } from "typedoc";
 
 /**
  * Parameter used to select what scripts to apply modifier tags to.
